@@ -5,7 +5,6 @@ def check_compatibility(socket_type, ram_type):
     socket = socket_type.upper()
     ram = ram_type.upper()
 
-    result = "INCOMPATIBLE"
 
     print("\n--- PC Component Compatibility Check ---")
     print(f"Components: Socket={socket}, RAM={ram}")
@@ -41,3 +40,9 @@ check_compatibility("AM4", "DDR5")
 
 # Example 3: Compatible components (lowercase input)
 check_compatibility("am4", "ddr4")
+
+# Example 4: LGA1700/DDR4 (missed compatibility)
+check_compatibility("LGA1700", "DDR4")
+
+# Example 5: Unknown socket type
+check_compatibility("LGA1200", "DDR4")
